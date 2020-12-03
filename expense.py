@@ -72,9 +72,9 @@ def UpdateData():
 		allprice = []
 		for dt in alldata[:10]:
 			textshow = textshow + '{} - {} - {}\n'.format(dt[0],dt[1],dt[2])
-			allprice.append(int(dt[2]))
+			#allprice.append(int(dt[2]))
 		v_history.set(textshow)
-		v_summary.set('{:,.2f}'.format(sum(allprice)))
+		#v_summary.set('{:,.2f}'.format(sum(allprice)))
 	except:
 		v_history.set('-----NO DATA-----')
 
@@ -123,10 +123,11 @@ R2.place(x=450,y=100)
 L1 = ttk.Label(GUI,text='-------Total Expense------',font=FONT2)
 L1.place(x=60,y=300)
 
-v_summary = StringVar()
-v_summary.set('0.00')
-R3 = ttk.Label(GUI,textvariable=v_summary,font=FONT2,foreground='green')
-R3.place(x=60,y=350)
+
+#v_summary = StringVar()
+#v_summary.set('0.00')
+#R3 = ttk.Label(GUI,textvariable=v_summary,font=FONT2,foreground='green')
+#R3.place(x=60,y=350)
 
 
 
